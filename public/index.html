@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SciAstra Course Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to SciAstra Course Store</h1>
+        <p>Select the courses you want to purchase:</p>
+
+        <div class="course-list">
+            <!-- List of courses -->
+            <div class="course-card" id="course1">
+                <h3>JavaScript Basics</h3>
+                <p>Learn the fundamentals of JavaScript.</p>
+                <button onclick="addToCart('JavaScript Basics', 500)">Add to Cart - ₹500</button>
+            </div>
+            <div class="course-card" id="course2">
+                <h3>React for Beginners</h3>
+                <p>Start building apps with React.js.</p>
+                <button onclick="addToCart('React for Beginners', 800)">Add to Cart - ₹800</button>
+            </div>
+            <div class="course-card" id="course3">
+                <h3>Node.js Mastery</h3>
+                <p>Become an expert in Node.js.</p>
+                <button onclick="addToCart('Node.js Mastery', 1000)">Add to Cart - ₹1000</button>
+            </div>
+        </div>
+
+        <!-- Checkout Button -->
+        <button id="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
+
+        <div id="cart-summary" style="margin-top: 30px; display: none;">
+            <h2>Cart Summary</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: ₹<span id="total-price">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

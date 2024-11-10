@@ -1,0 +1,199 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #f0f4f8, #e1e8f0); /* Soft gradient background */
+    color: #333;
+    padding: 0;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Container for the main content */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;  /* White background for content area */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for contrast */
+    border-radius: 8px;
+}
+
+/* Heading */
+h1 {
+    font-size: 2.5rem;
+    color: #4e73df; /* Beautiful blue accent */
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Description text */
+p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Course list container */
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Course card */
+.course-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.course-card h3 {
+    font-size: 1.6rem;
+    color: #4e73df; /* Accent color */
+    margin-bottom: 10px;
+}
+
+.course-card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.course-card button {
+    background-color: #4e73df;  /* Blue button background */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.course-card button:hover {
+    background-color: #2e59d9; /* Darker blue for hover effect */
+}
+
+/* Checkout button */
+#checkout-btn {
+    background-color: #28a745;  /* Green checkout button */
+    color: #fff;
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+#checkout-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Cart Summary */
+#cart-summary {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#cart-summary h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#cart-items li {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+#total-price {
+    font-size: 1.4rem;
+    color: #4e73df; /* Accent color for total price */
+    font-weight: bold;
+}
+
+/* Media Queries for responsiveness */
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .course-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course-card {
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+
+    #checkout-btn {
+        font-size: 1rem;
+    }
+}
+
+/* For large screens (tablets and above) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .course-list {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .course-card {
+        width: 45%;
+    }
+
+    #checkout-btn {
+        font-size: 1.1rem;
+    }
+}
+
+/* For extra large screens (desktops and above) */
+@media (min-width: 1024px) {
+    .course-list {
+        gap: 20px;
+    }
+
+    .course-card {
+        width: 30%;
+    }
+
+    #checkout-btn {
+        font-size: 1.2rem;
+    }
+}
